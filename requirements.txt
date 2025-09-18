@@ -1,0 +1,9 @@
+Flask
+Flask-CORS
+Werkzeug
+SpeechRecognition
+pydub
+requests
+librosa
+soundfile
+numpy
