@@ -18,8 +18,13 @@ import librosa
 import soundfile as sf
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "https://ai-powered-public-speaking-game.vercel.app/"}}, supports_credentials=True)
-
+CORS(
+    app,
+    resources={r"/api/*": {"origins": "https://ai-powered-public-speaking-game.vercel.app/"}},
+    supports_credentials=True,
+    allow_headers=["Content-Type", "Authorization"],
+    methods=["GET", "POST", "OPTIONS"]
+)
 # Configuration
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'wav', 'mp3', 'm4a', 'webm', 'ogg'}
